@@ -3,6 +3,11 @@
 A completed Flutter application built to master foundational Flutter and Dart concepts, including reactive state management, custom data models, list/map operations, and custom UI styling. 
 
 ---
+## 📸 Screenshots
+
+| Start Screen | Questions Screen | Results Screen |
+| :---: | :---: | :---: |
+| <img src="assets/images/start_screen.png" width="220" /> | <img src="assets/images/questions_screen.png" width="220" /> | <img src="assets/images/results_screen.png" width="220" /> |
 
 ## 🎨 App Overview & Features
 
