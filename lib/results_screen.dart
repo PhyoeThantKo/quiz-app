@@ -3,9 +3,14 @@ import 'package:quiz_app_practice/data/questions.dart';
 import 'package:quiz_app_practice/results_summary.dart';
 
 class ResultsScreen extends StatelessWidget {
-  ResultsScreen({super.key, required this.selectedAnswers});
+  ResultsScreen({
+    super.key,
+    required this.selectedAnswers,
+    required this.onRestart,
+  });
 
   final List<String> selectedAnswers;
+  void Function() onRestart;
 
   List<Map<String, Object>> getSummaryData() {
     final List<Map<String, Object>> summary = [];
@@ -38,13 +43,13 @@ class ResultsScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "You answered $numCorrectAnswers out of $numQuestions questions correctly You answered X out of Y questions correctly You answered X out of Y questions correctly",
+              "You answered $numCorrectAnswers out of $numQuestions questions correctly",
             ),
             SizedBox(height: 30),
             ResultsSummary(summaryData),
             SizedBox(height: 30),
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: onRestart,
               icon: Icon(Icons.refresh),
               label: Text("Restart Quiz!"),
             ),
